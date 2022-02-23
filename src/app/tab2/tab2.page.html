@@ -1,17 +1,53 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar style="--background: rgb(43, 146, 43);">
     <ion-title>
-      Tab 2
+      
+      <!-- <ion-item class="header"> -->
+        <ion-label>
+          <ion-icon  name ="arrow-back-outline"></ion-icon>
+          
+        </ion-label>
+        <ion-label class="headertext">ຂໍ້ມູນ ແລະ ລາຍລະອຽດ</ion-label>
+      <!-- </ion-item> -->
+    
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+    <!-- <ion-card class="image">
+      <ion-card-content class="imagess" >
+        <img class="iconimage"src="./../../assets/icon/vegetable.jpg" alt="">   
+      </ion-card-content>
+     
+      <ion-item class="item" lines="none">
+        <ion-label>describe you comment</ion-label>
+        <ion-label> here </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>like
+          <ion-icon name="thumbs-up"></ion-icon>
+        </ion-label>
+        <ion-label slot="end">
+          <ion-icon  name="heart-outline"></ion-icon>dislike
+        </ion-label>
+                       
+      </ion-item>
+    </ion-card>   -->
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-card *ngFor="let i of postlist">
+      <ion-item>
+        <ion-label>{{i.productName}}</ion-label>
+        
+      </ion-item>
+
+      <ion-card-content>
+        <ion-label>{{i.memberName}}</ion-label>                                  
+          {{i.createdAt | date}} -       
+          {{i.expectDate |date}}
+          {{i.expectQty}}
+      </ion-card-content>
+    </ion-card>
+    <ion-item style="--background: wheat; text-align: right; color:black" >{{sum|number}}</ion-item>
 </ion-content>

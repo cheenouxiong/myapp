@@ -1,0 +1,48 @@
+
+.content{
+    background: white;
+    color:black;
+    padding-left: 10px ;
+    margin:10px 10px;
+}
+.header{
+    margin-left: 30%;
+}
+.input  {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius:10px;
+    padding-top: 10px;
+    border:1px solid rgb(112,173,71);
+    color: black;
+    --background: rgb(255, 255, 255);
+    margin-right: 8px;
+}
+.inputdate  {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius:10px;
+    padding-top: 10px;
+    border:1px solid rgb(112,173,71);
+    color: black;
+    --background: rgb(255, 255, 255);
+    margin-right: 8px;
+}
+.items{
+    margin-left: 0px;
+}
+.contents{
+    --background: white;
+}
+.selectoption{
+    margin-top: 5px;
+    margin-bottom:15px;
+    border-radius: 10px;
+    border:1px solid rgb(112,173,71);
+    color:black;
+    --background: rgb(255, 255, 255);
+
+}
+.my-custom-class{
+    --background: white;
+}

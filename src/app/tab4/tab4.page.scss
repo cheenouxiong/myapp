@@ -1,0 +1,92 @@
+.home{
+    background-color: antiquewhite;
+}
+.body{
+    background-color: aquamarine;
+}
+.my-custom-menu {
+    --width: 100px;
+  }
+  .toolbar{
+      text-align: center;
+      --background: black;
+  }
+  .selectoptions{
+      text-align: center;
+      background: black;
+  }
+  .item-language{
+      --background: black;
+      
+  }
+  .class-content{
+      --background: white;    
+  }
+  .listclass{
+    background: white;
+    color:black;
+  }
+  .menuclass{
+      --background: white;
+      color:black;
+      margin-bottom: 2px;
+    .logo-facebook{
+        color: blue;
+    }
+    .logo-image{
+        color: green;
+    }
+    .logo-youtube{
+        color: red;
+    }
+    .logo-twitter{
+        color: rgb(39, 39, 240);
+    }
+    .logo-navigate{
+        color: rgb(64, 64, 255);
+    }
+  }
+  footer{
+      margin-bottom: 0px;
+  }
+  .contents{
+    --background: rgb(0, 0, 0);
+    margin-top: 0px;
+  }
+  .itemclass{         
+    --background: rgb(0, 0, 0);
+    padding-left: 0px;    
+    padding-right: 90px;
+    margin-bottom: 50px;
+  }
+ 
+  .img{
+    
+    width: 60px;
+    height: 60px;
+    margin-bottom: 60px;
+    border-radius: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.mainform{
+    background: white;
+
+}
+.card{
+    --background: rgb(0, 0, 0);
+    text-align: center;
+}
+h6{
+    margin-bottom: 20px;
+}
+.itembutton{
+    margin-left: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.items{
+   --background: black;
+}

@@ -1,17 +1,103 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header  [translucent]="true">
+  <ion-toolbar style="height:50px;--background: rgb(43, 146, 43); ">
+    <!-- <ion-item style="color:black;height:50px;--background: rgb(43, 146, 43); text-align: center;"> -->
+      <ion-title size="large">
+        <ion-icon (click)="closemodal()" name="arrow-back-outline"></ion-icon>       
+        <ion-label class="header" > {{header}}</ion-label>
+      </ion-title>
+    <!-- </ion-item> -->
+   
   </ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="true" class="contents"> 
+ 
+  <form action="">
+    <div class="content">
+      <ion-label>ຊື່ສະມາຊີກ: </ion-label>      
+      <ion-input class="input" type="text" [(ngModel)]="name"[ngModelOptions]="{standalone: true}"  ></ion-input>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-label>ຊື່ຜະລິດຕະພັນ</ion-label>
+      <div >       
+        <ion-select class="input" value="titlename" >
+          <!-- <ion-select-option value="vegetable">Vegetable</ion-select-option>
+          <ion-select-option value="Fruilt">Fruilt</ion-select-option>
+          <ion-select-option value="Animal">Animal </ion-select-option> -->
+          <ion-list>
+            <ion-list>
+              <ion-radio-group >           
+                <ion-item *ngFor="let item of radio">
+                  <ion-label>{{item.name}}</ion-label>
+                  <ion-radio value="{{item.name}}"></ion-radio>
+                </ion-item>
+               
+              </ion-radio-group>
+            </ion-list>
+          </ion-list>
+        </ion-select>
+        
+      </div>
+      
+      <div>
+        <ion-label>ວັນເດືອນປີຂອງການຜະລິດ</ion-label>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+        <ion-input  class="inputdate"[value]="dateValue2">
+          <ion-button  fill="clear" id="open-date-input-2">
+            <ion-icon  icon="calendar"></ion-icon>
+          </ion-button>
+          <ion-popover trigger="open-date-input-2" show-backdrop="false">
+            <ng-template>
+              <ion-datetime
+                #popoverDatetime2
+                presentation="date"
+                (ionChange)="dateValue2 = formatDate(popoverDatetime2.value)"
+              ></ion-datetime>
+            </ng-template>
+          </ion-popover>
+        </ion-input>
+               
+      </div>
+
+      <ion-label>ປະລິມານການຜະລິດ (ເຮັດຕາ) </ion-label>      
+      <ion-input class="input" [(ngModel)]="product" [ngModelOptions]="{standalone: true}" type="text"></ion-input>
+
+      <div>
+        <ion-label>ຄາດຄະເນມື້ເກັບກ່ຽວຜົນ</ion-label>
+        <ion-input  class="inputdate"[value]="dateValue2">
+          <ion-button  fill="clear" id="open-date-input-2">
+            <ion-icon  icon="calendar"></ion-icon>
+          </ion-button>
+          <ion-popover trigger="open-date-input-2" show-backdrop="false">
+            <ng-template>
+              <ion-datetime
+                #popoverDatetime2
+                presentation="date"
+                (ionChange)="dateValue2 = formatDate(popoverDatetime2.value)"
+              ></ion-datetime>
+            </ng-template>
+          </ion-popover>
+        </ion-input>               
+      </div>
+
+      <ion-label>ຄາດຄະເນປະລິມານຜົນຜະລິດ</ion-label>       
+         <ion-item class="items" style="padding-left:1px;color:black; width: 100%;height: 50px; --background: white; ">
+          <ion-input class="inputdate" [(ngModel)]="Estimatproduct" [ngModelOptions]="{standalone: true}" type="number" >        
+          </ion-input>
+          <ion-label>ໂຕນ</ion-label> 
+         </ion-item>       
+                
+      <ion-input type="text" >ລາຄາຂາຍ</ion-input>     
+      <ion-item class="items" style="padding-left:1px;color:black; width: 100%;height: 50px; --background: white; ">
+        <ion-input class="input"  [(ngModel)]="Price" [ngModelOptions]="{standalone: true}" type="number"  ></ion-input>
+        <ion-label>ກີບຕໍ່ໂຕນ</ion-label>
+      </ion-item>
+
+      <ion-item class="items"  style="padding-left:1px;color:black; width: 100%;height: 50px; --background: white;">
+        <ion-button color="danger">ລ້າງຂໍ້ມູນ</ion-button>
+        <ion-button (click)="onclick()" slot="end" color="primary">ເພີ່ມ</ion-button>
+      </ion-item>
+     
+    </div>
+  </form>
+ 
+ 
 </ion-content>
